@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomApp">
         <activity
-            android:name=".CreateNoteActivity"
+            android:name=".activity.editnote.EditNoteActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.createnote.CreateNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

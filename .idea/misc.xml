@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Semester 8/Belajar Android/RoomApp/app/src/main/res/layout/activity_create_note.xml" value="0.22" />
+        <entry key="..\:/Semester 8/Belajar Android/RoomApp/app/src/main/res/layout/activity_edit_note.xml" value="0.22" />
         <entry key="..\:/Semester 8/Belajar Android/RoomApp/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Semester 8/Belajar Android/RoomApp/app/src/main/res/layout/item_note_adapter.xml" value="0.33" />
       </map>
     </option>
   </component>
