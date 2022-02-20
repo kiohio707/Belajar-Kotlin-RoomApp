@@ -48,4 +48,10 @@ class NoteViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun delete(note: NoteModel) {
+        CoroutineScope(Dispatchers.IO).launch {
+            noteDao?.deleteNote(note)
+        }
+    }
+
 }

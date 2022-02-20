@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.roomapp.adapter.NoteAdapter
 import com.example.roomapp.activity.createnote.CreateNoteActivity
 import com.example.roomapp.activity.createnote.NoteViewModel
@@ -65,6 +67,21 @@ class MainActivity : AppCompatActivity() {
 
             })
         }
+        ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                viewModel.delete(adapter.getNoteAt(viewHolder.layoutPosition))
+                Toast.makeText(this@MainActivity, "Note Berhasil Dihapus", Toast.LENGTH_SHORT).show()
+            }
+
+        }).attachToRecyclerView(binding.recViewMain)
 
     }
 

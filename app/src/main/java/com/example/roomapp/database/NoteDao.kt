@@ -1,10 +1,7 @@
 package com.example.roomapp.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.example.roomapp.model.NoteModel
 
 @Dao
@@ -20,4 +17,7 @@ interface NoteDao {
 
     @Update
     fun updateNote(note: NoteModel)
+
+    @Delete
+    fun deleteNote(note: NoteModel): Int
 }

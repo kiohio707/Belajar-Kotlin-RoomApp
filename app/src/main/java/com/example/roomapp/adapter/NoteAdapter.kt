@@ -21,6 +21,8 @@ class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         notifyDataSetChanged()
     }
 
+    fun getNoteAt(position: Int): NoteModel = listNote[position]
+
     inner class NoteViewHolder(val binding:ItemNoteAdapterBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(note: NoteModel) {
             with(binding) {
